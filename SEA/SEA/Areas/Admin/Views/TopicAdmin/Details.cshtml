@@ -1,0 +1,122 @@
+﻿@model Models.Topic
+@using SEA.Heplers;
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="xs">
+    <h2>Details</h2>
+    <div class="well1 white">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Avatar)
+            </dt>
+
+            <dd>
+                <img src="@(string.IsNullOrEmpty(Model.Avatar)?Display.DEFAULT_IMAGE:Model.Avatar)" />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Order)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Order)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ParentId)
+            </dt>
+
+            <dd>
+                @Display.DisplayNameTopic(Model.ParentId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreateBy)
+            </dt>
+
+            <dd>
+                @Display.DisplayNameAccount(Model.CreateBy)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreateDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EditBy)
+            </dt>
+
+            <dd>
+                @Display.DisplayNameAccount(Model.EditBy)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.EditDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.EditDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </dt>
+
+            <dd>
+                @Display.DisplayActive(Model.IsActive)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LangId)
+            </dt>
+
+            <dd>
+                @Display.DisplayLanguage(Model.LangId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RootId)
+            </dt>
+
+            <dd>
+                @Display.DisplayNameTopic(Model.RootId)
+            </dd>
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+
+   
+</div>

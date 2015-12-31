@@ -1,0 +1,116 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Modern Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Areas/Admin/Content/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="~/Areas/Admin/Content/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="~/Areas/Admin/Content/css/lines.css" rel='stylesheet' type='text/css' />
+    <link href="~/Areas/Admin/Content/css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="~/Areas/Admin/Content/js/jquery.min.js"></script>
+    <!----webfonts--->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!-- Nav CSS -->
+    <link href="~/Areas/Admin/Content/css/custom.css" rel="stylesheet">
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Areas/Admin/Content/js/metisMenu.min.js"></script>
+    <script src="~/Areas/Admin/Content/js/custom.js"></script>
+    <!-- Graph JavaScript -->
+    <script src="~/Areas/Admin/Content/js/d3.v3.js"></script>
+    <script src="~/Areas/Admin/Content/js/rickshaw.js"></script>
+    <script src="~/Scripts/ckfinder/ckfinder.js"></script>
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script>
+    $(document).ready(function () {
+        $("#MainImage").on('click', function (e) {
+            //< Chú ý: SelectImage là input sự kiện >
+                e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                //$("#Image").val(url);
+                //< Chú ý: Image là on nhận đường link của file>
+                };
+            finder.popup();
+        });
+    });
+    </script>
+    <script>
+    $(document).ready(function () {
+        $("#SelectImage").on('click', function (e) {
+            //< Chú ý: SelectImage là input sự kiện >
+                e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $("#Image").val(url);
+                $("#Container").attr("src", url);
+                //< Chú ý: Image là on nhận đường link của file>
+                };
+            finder.popup();
+        });
+    });
+    </script>
+    <script type="text/javascript">
+        var editor;
+        function createEditor(languageCode, id) {
+            var editor = CKEDITOR.replace(id, {
+                language: languageCode
+            });
+        }
+        $(function () {
+            createEditor('vi', 'text');
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Modern</a>
+            </div>
+            <!-- /.navbar-header -->
+            @RenderPage("_navbar-right.cshtml")
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
+            </form>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    @RenderPage("_side-menu.cshtml")
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="graphs">
+                @RenderBody()
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Areas/Admin/Content/js/bootstrap.min.js"></script>
+</body>
+</html>
