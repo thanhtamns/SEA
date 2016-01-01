@@ -34,10 +34,25 @@ namespace SEA.Heplers
             var list = new MyBlogEntities().Languages.ToList();
             return new SelectList(list, "Id", "Name", id);
         }
-        public static SelectList SelectNameTopic()
+        public static SelectList SelectNameTopic(string langId = "en")
         {
-            var list = new MyBlogEntities().Topics.ToList();
+            var list = new MyBlogEntities().Topics.Where(x=>x.LangId == langId).ToList();
             return new SelectList(list, "Name", "Name");
         }
+        public static SelectList SelectListPost(int rootId,string langId = "")
+        {
+            var list = new List<Post>();
+            list.Add(new Post() { Id = 0, Name = "Not exists" });
+            if (langId == "")
+            {
+                list.AddRange(new MyBlogEntities().Posts.ToList());
+            }
+            else
+            {
+                list.AddRange(new MyBlogEntities().Posts.Where(x => x.LangId != langId).ToList());
+            }
+            return new SelectList(list, "Id", "Name", rootId);
+        }
+        
     }
 }

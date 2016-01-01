@@ -11,7 +11,8 @@ namespace Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
     public partial class Post
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -28,6 +29,8 @@ namespace Models
         public string Name { get; set; }
         public string Avatar { get; set; }
         public string Description { get; set; }
+        [AllowHtml]
+        [DataType(DataType.MultilineText)]
         public string Content { get; set; }
         public int Order { get; set; }
         public string CreateBy { get; set; }

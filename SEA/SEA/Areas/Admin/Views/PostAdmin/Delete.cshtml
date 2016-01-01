@@ -1,8 +1,5 @@
-﻿@model Models.Topic
-@using SEA.Heplers
-@{
-    ViewBag.Title = "Delete";
-}
+﻿@model Models.Post
+
 <div class="xs">
     <h2>Delete</h2>
 
@@ -42,6 +39,14 @@
             </dd>
 
             <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+
+            <dt>
                 @Html.DisplayNameFor(model => model.Order)
             </dt>
 
@@ -50,19 +55,11 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.ParentId)
-            </dt>
-
-            <dd>
-                @Display.DisplayNameTopic(Model.ParentId)
-            </dd>
-
-            <dt>
                 @Html.DisplayNameFor(model => model.CreateBy)
             </dt>
 
             <dd>
-                @Display.DisplayNameAccount(Model.CreateBy)
+                @SEA.Heplers.Display.DisplayNameAccount(Model.CreateBy)
             </dd>
 
             <dt>
@@ -78,7 +75,7 @@
             </dt>
 
             <dd>
-                @Display.DisplayNameAccount(Model.EditBy)
+                @SEA.Heplers.Display.DisplayNameAccount(Model.EditBy)
             </dd>
 
             <dt>
@@ -94,7 +91,7 @@
             </dt>
 
             <dd>
-                @Display.DisplayActive(Model.IsActive)
+                @SEA.Heplers.Display.DisplayActive(Model.IsActive)
             </dd>
 
             <dt>
@@ -102,16 +99,9 @@
             </dt>
 
             <dd>
-                @Display.DisplayLanguage(Model.LangId)
+                @SEA.Heplers.Display.DisplayLanguage(Model.LangId)
             </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.RootId)
-            </dt>
-
-            <dd>
-                @Display.DisplayNameTopic(Model.RootId)
-            </dd>
         </dl>
 
         @using (Html.BeginForm())
@@ -126,3 +116,4 @@
     </div>
 
 </div>
+

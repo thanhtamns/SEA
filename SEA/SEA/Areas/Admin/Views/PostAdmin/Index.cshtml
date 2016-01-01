@@ -1,10 +1,9 @@
-﻿@model PagedList.PagedList<Models.Topic>
+﻿@model PagedList.PagedList<Models.Post>
 @using PagedList.Mvc
 @using SEA.Heplers
 @{
     ViewBag.Title = "Index";
 }
-
 <div class="xs">
     <h2>Index</h2>
     <div class="bs-example4">
@@ -15,9 +14,6 @@
                         Name
                     </th>
                     <th>
-                        Parent
-                    </th>
-                    <th>
                         Order
                     </th>
                     <th>
@@ -25,9 +21,6 @@
                     </th>
                     <th>
                         Language
-                    </th>
-                    <th>
-                        Root
                     </th>
                     <th>
 
@@ -42,9 +35,6 @@
                             @item.Name
                         </td>
                         <td>
-                            @Display.DisplayNameTopic(item.ParentId)
-                        </td>
-                        <td>
                             @item.Order
                         </td>
                         <td>
@@ -54,12 +44,10 @@
                             @Display.DisplayLanguage(item.LangId)
                         </td>
                         <td>
-                            @Display.DisplayNameTopic(item.RootId)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id})|
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id })|
                             @Html.ActionLink("Details", "Details", new { id = item.Id })|
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })|
+                            @Html.ActionLink("EditJoin", "EditJoin", new { id = item.Id })
                         </td>
 
                     </tr>

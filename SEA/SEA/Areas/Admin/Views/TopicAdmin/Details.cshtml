@@ -29,7 +29,7 @@
             </dt>
 
             <dd>
-                <img src="@(string.IsNullOrEmpty(Model.Avatar)?Display.DEFAULT_IMAGE:Model.Avatar)" />
+                <img src="@(string.IsNullOrEmpty(Model.Avatar)?null:Model.Avatar)" />
             </dd>
 
             <dt>

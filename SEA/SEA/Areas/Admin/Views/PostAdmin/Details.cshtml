@@ -1,13 +1,8 @@
-﻿@model Models.Topic
-@using SEA.Heplers
-@{
-    ViewBag.Title = "Delete";
-}
-<div class="xs">
-    <h2>Delete</h2>
+﻿@model Models.Post
 
-    <h3>Are you sure you want to delete this?</h3>
-    <div class="well1">
+<div class="xs">
+    <h2>Details</h2>
+    <div class="well1 white">
         <dl class="dl-horizontal">
             <dt>
                 @Html.DisplayNameFor(model => model.Title)
@@ -42,6 +37,14 @@
             </dd>
 
             <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+
+            <dt>
                 @Html.DisplayNameFor(model => model.Order)
             </dt>
 
@@ -50,19 +53,11 @@
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.ParentId)
-            </dt>
-
-            <dd>
-                @Display.DisplayNameTopic(Model.ParentId)
-            </dd>
-
-            <dt>
                 @Html.DisplayNameFor(model => model.CreateBy)
             </dt>
 
             <dd>
-                @Display.DisplayNameAccount(Model.CreateBy)
+                @SEA.Heplers.Display.DisplayNameAccount(Model.CreateBy)
             </dd>
 
             <dt>
@@ -78,7 +73,7 @@
             </dt>
 
             <dd>
-                @Display.DisplayNameAccount(Model.EditBy)
+                @SEA.Heplers.Display.DisplayNameAccount(Model.EditBy)
             </dd>
 
             <dt>
@@ -94,7 +89,7 @@
             </dt>
 
             <dd>
-                @Display.DisplayActive(Model.IsActive)
+                @SEA.Heplers.Display.DisplayActive(Model.IsActive)
             </dd>
 
             <dt>
@@ -102,27 +97,25 @@
             </dt>
 
             <dd>
-                @Display.DisplayLanguage(Model.LangId)
+                @SEA.Heplers.Display.DisplayLanguage(Model.LangId)
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.RootId)
+                List Topic
             </dt>
 
-            <dd>
-                @Display.DisplayNameTopic(Model.RootId)
-            </dd>
+            
+                    @foreach (var item in Model.Topics)
+                    {
+                        <dd>@item.Name</dd>
+                    }
+
         </dl>
-
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-default" /> |
-                @Html.ActionLink("Back to List", "Index")
-            </div>
-        }
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
     </div>
+
 
 </div>
