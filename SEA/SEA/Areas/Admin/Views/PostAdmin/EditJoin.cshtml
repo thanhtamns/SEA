@@ -1,0 +1,126 @@
+﻿@model Models.Post
+
+<h2>Add Join</h2>
+<div class="xs">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="well1 white">
+            <div class="form-horizontal">
+                <h4>Post</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.Id)
+
+                <div class="form-group">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Title)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+                        <dt>
+                            @Html.DisplayNameFor(model => model.LangId)
+                        </dt>
+
+                        <dd>
+                            @SEA.Heplers.Display.DisplayLanguage(Model.LangId)
+                        </dd>
+
+                    </dl>
+                </div>
+
+                @if (ViewBag.Root != null)
+                {
+                    <div class="form-group">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Title)
+                            </dt>
+
+                            <dd>
+                                @ViewBag.Root.Title
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </dt>
+
+                            <dd>
+                                @ViewBag.Root.Name
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.LangId)
+                            </dt>
+
+                            <dd>
+                                @SEA.Heplers.Display.DisplayLanguage(ViewBag.Root.LangId)
+                            </dd>
+
+                        </dl>
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                Error
+                            </dt>
+
+                            <dd>
+                                Not exists
+                            </dd>
+
+
+                        </dl>
+                    </div>
+                }
+                
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RootId, htmlAttributes: new { @class = "control-label col-md-2"})
+                    <div class="col-md-10">
+                        @Html.DropDownList("A", ViewBag.SelectLang as SelectList, new { @class = "form-control", id = "lang" })
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $("#lang").change(function () {
+                            var lang = $("#lang").val();
+                            $("#post").load("/Admin/PostAdmin/ListPostByLang/" + lang);
+                        });
+                    });
+                </script>
+                <div class="form-group" id="post">
+                    @Html.LabelFor(model => model.RootId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.RootId, ViewBag.SelectRootId as SelectList, new { @class = "form-control"})
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+            
+
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+    }
+</div>

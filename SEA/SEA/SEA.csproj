@@ -508,6 +508,12 @@
     <Content Include="Areas\Admin\Views\TopicAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\PostAdmin\Create.cshtml" />
     <Content Include="Areas\Admin\Views\TopicAdmin\ListTopicByLanguage.cshtml" />
+    <Content Include="Areas\Admin\Views\PostAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PostAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\PostAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\PostAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PostAdmin\EditJoin.cshtml" />
+    <Content Include="Areas\Admin\Views\PostAdmin\ListPostByLang.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\build-config.js" />

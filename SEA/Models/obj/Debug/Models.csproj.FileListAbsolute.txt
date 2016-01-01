@@ -21,3 +21,26 @@ D:\Project\Blog SEA\SEA\Models\bin\Debug\System.Web.Razor.xml
 D:\Project\Blog SEA\SEA\Models\bin\Debug\System.Web.WebPages.xml
 D:\Project\Blog SEA\SEA\Models\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Project\Blog SEA\SEA\Models\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\Models.dll.config
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\Models.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\Models.pdb
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\EntityFramework.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.Helpers.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.Mvc.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.Razor.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.WebPages.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\EntityFramework.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.Helpers.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.Mvc.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.Razor.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.WebPages.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\obj\Debug\Models.dll
+C:\Users\nguye_000\Documents\GitHub\SEA\SEA\Models\obj\Debug\Models.pdb
