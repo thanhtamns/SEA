@@ -32,5 +32,7 @@ namespace Models
         public virtual AspNetUser AspNetUser { get; set; }
         public virtual AspNetUser AspNetUser1 { get; set; }
         public virtual Language Language { get; set; }
+
+        public string Title { get; set; }
     }
 }

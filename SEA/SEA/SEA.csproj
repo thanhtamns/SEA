@@ -172,8 +172,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ConfigsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NavigationsAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\TopicAdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -514,6 +516,15 @@
     <Content Include="Areas\Admin\Views\PostAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\PostAdmin\EditJoin.cshtml" />
     <Content Include="Areas\Admin\Views\PostAdmin\ListPostByLang.cshtml" />
+    <Content Include="Areas\Admin\Views\NavigationsAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NavigationsAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NavigationsAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NavigationsAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ConfigsAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ConfigsAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ConfigsAdmin\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ConfigsAdmin\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ConfigsAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\build-config.js" />

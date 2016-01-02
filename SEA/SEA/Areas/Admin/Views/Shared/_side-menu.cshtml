@@ -36,16 +36,16 @@
         <!-- /.nav-second-level -->
     </li>
     <li>
-        <a href="widgets.html"><i class="fa fa-flask nav_icon"></i>Widgets</a>
+        <a href="@Url.Action("Index", "ConfigsAdmin")"><i class="fa fa-flask nav_icon"></i>Config</a>
     </li>
     <li>
-        <a href="#"><i class="fa fa-check-square-o nav_icon"></i>Forms<span class="fa arrow"></span></a>
+        <a href="#"><i class="fa fa-check-square-o nav_icon"></i>Navigation<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
             <li>
-                <a href="forms.html">Basic Forms</a>
+                <a href="@Url.Action("Index", "NavigationsAdmin")">List Navigation</a>
             </li>
             <li>
-                <a href="validation.html">Validation</a>
+                <a href="@Url.Action("Create", "NavigationsAdmin")">Create</a>
             </li>
         </ul>
         <!-- /.nav-second-level -->

@@ -1,0 +1,77 @@
+﻿@model PagedList.PagedList<Models.Navigation>
+@using PagedList.Mvc
+@using SEA.Heplers
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="xs">
+     <h2>Index</h2>
+     <div class="bs-example4">
+         <table class="table">
+             <tr>
+                 <th>
+                     Name
+                 </th>
+                 <th>
+                     Link
+                 </th>
+                 <th>
+                     Oder
+                 </th>
+
+                 <th>
+                     CreateDate
+                 </th>
+                 <th>
+                     EditDate
+                 </th>
+                 <th>
+                     Status
+                 </th>
+                 <th>
+                     Language
+                 </th>
+                 <th>Tools</th>
+             </tr>
+             <tbody>
+                 @foreach (var item in Model)
+                 {
+                     <tr>
+                         <td>
+                             @item.Name
+                         </td>
+                         <td>
+                             @item.Url
+                         </td>
+                         <td>
+                             @item.Order
+                         </td>
+
+                         <td>
+                             @item.CreateDate
+                         </td>
+
+                         <td>
+                             @item.EditDate
+                         </td>
+                         <td>
+                             @SEA.Heplers.Display.DisplayActive(item.IsActive)
+                         </td>
+                         <td>
+                             @SEA.Heplers.Display.DisplayLanguage(item.LangId)
+                         </td>
+                         <td>
+                             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                             @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+
+                         </td>
+                     </tr>
+                 }
+             </tbody>
+         </table>
+         @Html.PagedListPager(Model, Page => Url.Action("Index", new { Page }))
+     </div>
+</div>

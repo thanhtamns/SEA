@@ -13,6 +13,11 @@ namespace SEA.Areas.Admin.Controllers
         {
             return new MyBlogEntities().AspNetUsers.SingleOrDefault(x => x.Email == name).Id;
         }
+
+        internal static object GetId()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     [AuthorizeAdmin]
