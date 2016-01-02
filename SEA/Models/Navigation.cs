@@ -28,5 +28,7 @@ namespace Models
         public bool IsActive { get; set; }
     
         public virtual Language Language { get; set; }
+
+        public string Title { get; set; }
     }
 }
