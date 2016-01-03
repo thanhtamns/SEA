@@ -1,17 +1,14 @@
 ﻿@model Models.FeelBack
-
+@using PagedList.Mvc
+@using SEA.Heplers
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-</head>
-<body>
+<h2>Details</h2>
+
+
     <div>
         <h4>FeelBack</h4>
         <hr />
@@ -19,48 +16,46 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Name)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Name)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Email)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Email)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.Content)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Content)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.CreateDate)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.CreateDate)
             </dd>
-    
+
             <dt>
                 @Html.DisplayNameFor(model => model.HaveRead)
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.HaveRead)
             </dd>
-    
+
         </dl>
     </div>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
         @Html.ActionLink("Back to List", "Index")
     </p>
-</body>
-</html>
